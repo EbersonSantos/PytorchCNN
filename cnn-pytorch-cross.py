@@ -249,9 +249,9 @@ for fold in range(1, n_folds+1):
 
 	acc = None
 	for epoch in range(1, epochs+1):
-		acc = test(epoch, test_loader)
 		train(epoch, train_loader, batch_size)
 		print('\n-------------------TESTE-----------------------------\n')
+		acc = test(epoch, test_loader)
 	
 	accuracies.append(acc)
 
